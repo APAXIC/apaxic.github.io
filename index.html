@@ -1,53 +1,447 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Personal developer portfolio">
-  <title>Andrii Vus | Portfolio</title>
-  <style>
-    * { box-sizing: border-box; }
-    body {
-      margin: 0;
-      background: #111827;
-      color: #f9fafb;
-      font-family: system-ui, sans-serif;
-    }
-    nav {
-      padding: 24px 8%;
-      border-bottom: 1px solid #374151;
-    }
-    main {
-      max-width: 800px;
-      margin: 12vh auto;
-      padding: 0 24px;
-    }
-    h1 { font-size: clamp(36px, 6vw, 60px); }
-    p { color: #9ca3af; line-height: 1.8; }
-    a {
-      display: inline-block;
-      background: white;
-      color: #111827;
-      padding: 12px 20px;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: 600;
-    }
-  </style>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <meta content="#0754d8" name="theme-color">
+    <meta content="Computer science student and software developer — projects, skills and education." name="description">
+    <title>Andrii's Portfolio.exe</title>
+    <link rel="icon" type="image/x-icon" href="./assets/icons/xp.ico">
+    <link href="style.css" rel="stylesheet">
+    <script defer="" src="script.js"></script>
 </head>
 <body>
-  <nav>Andrii Vus / Portfolio</nav>
-  <main>
-    <h1>Hi, I'm Andrii Vus.</h1>
-    <h2>Software Developer</h2>
-    <p>
-      My portfolio is currently under development.
-      In the meantime, feel free to explore
-      my work on GitHub.
-    </p>
-    <a href="https://github.com/APAXIC">
-      View my GitHub ↗
-    </a>
-  </main>
+<header class="topbar">
+    <div class="topbar-inner">
+        <a class="brand" href="#home">
+            <img src="assets/icons/windows.png" alt="" class="icon icon-brand" loading="lazy">
+            Andrii's Portfolio.exe
+        </a>
+        <nav aria-label="Main navigation">
+            <a href="#home">🏠<span>Home</span></a>
+            <a href="#projects">📁<span>Projects</span></a>
+            <a href="#education">🎓<span>Education</span></a>
+            <a href="#contact">✉️<span>Contact</span></a>
+        </nav>
+    </div>
+</header>
+<main>
+    <section class="intro wrap" id="home">
+        <div class="identity">
+            <div aria-label="Placeholder avatar" class="avatar">
+                <img src="assets/profile.jpg" alt="Your Name" class="profile-photo" loading="lazy">
+            </div>
+            <div>
+                <h1>Andrii Vus<span class="cursor">_</span></h1>
+                <p class="subtitle">Computer Science Student | Software Developer</p>
+            </div>
+        </div>
+        <div class="intro-grid">
+            <article class="window summary">
+                <div class="titlebar">
+                    <span>📄 Summary.txt — Notepad</span>
+                    <div aria-hidden="true" class="window-controls"><i>_</i><i>□</i><i>×</i></div>
+                </div>
+                <div class="window-content">
+                    <h2>Hello there!</h2>
+                    <p>
+                        I'm a computer science student at DCU with solid experience building full-stack applications
+                        using JavaScript, TypeScript, C# and Python.
+                    </p>
+                    <p>
+                        I am passionate about solving challenging problems, learning new technologies, and collaborating
+                        with others to build useful, reliable software.
+                    </p>
+                    <p>
+                        I'm especially interested in software engineering, backend systems, and infrastructure.
+                    </p>
+                    <div class="summary-links">
+                        <a href="https://github.com/USERNAME" rel="noopener noreferrer" target="_blank">
+                            <img src="assets/icons/github.png" alt="" class="icon icon-summary" loading="lazy">
+                            GitHub ↗
+                        </a>
+                        <a href="mailto:irishardron@gmail.com">✉ Email ↗</a>
+                    </div>
+                </div>
+            </article>
+            <article aria-labelledby="skills-heading" class="skills-window window">
+                <div class="titlebar">
+                    <span id="skills-heading">
+                        <img src="assets/icons/windows.png" alt="" class="icon icon-title" loading="lazy">
+                        Skills — Start Menu
+                    </span>
+                    <div aria-hidden="true" class="window-controls">
+                        <i>_</i>
+                        <i>□</i>
+                        <i>×</i>
+                    </div>
+                </div>
+                <div class="skills-body">
+                    <div aria-label="Skill categories" class="skills-tabs" role="tablist">
+                        <button aria-controls="panel-technical"
+                                aria-selected="true"
+                                data-tab="technical"
+                                id="tab-technical"
+                                role="tab"
+                                tabindex="0"
+                                type="button">
+                            🖥️
+                            <span>Technical Skills</span>
+                            <b>›</b>
+                        </button>
+                        <button aria-controls="panel-soft"
+                                aria-selected="false"
+                                data-tab="soft"
+                                id="tab-soft"
+                                role="tab"
+                                tabindex="-1"
+                                type="button">
+                            👥
+                            <span>Soft Skills</span>
+                            <b>›</b>
+                        </button>
+                        <button aria-controls="panel-tools"
+                                aria-selected="false"
+                                data-tab="tools"
+                                id="tab-tools"
+                                role="tab"
+                                tabindex="-1"
+                                type="button">
+                            ⚙️
+                            <span>Tools &amp; Environment</span>
+                            <b>›</b>
+                        </button>
+                    </div>
+                    <div class="skills-panels">
+                        <div aria-labelledby="tab-technical" class="skills-panel" id="panel-technical" role="tabpanel">
+                            <ul>
+                                <li><button class="skill-button" data-skill="JavaScript / TypeScript" type="button">JavaScript / TypeScript</button></li>
+                                <li><button class="skill-button" data-skill="C# / Python" type="button">C# / Python</button></li>
+                                <li><button class="skill-button" data-skill="React" type="button">React</button></li>
+                                <li><button class="skill-button" data-skill="Django" type="button">Django</button></li>
+                                <li><button class="skill-button" data-skill="Express.js / NestJS" type="button">Express.js / NestJS</button></li>
+                                <li><button class="skill-button" data-skill="PostgreSQL / MongoDB" type="button">PostgreSQL / MongoDB</button></li>
+                                <li><button class="skill-button" data-skill="HTML5 / CSS3" type="button">HTML5 / CSS3</button></li>
+                            </ul>
+                        </div>
+                        <div aria-labelledby="tab-soft" class="skills-panel" hidden="" id="panel-soft" role="tabpanel">
+                            <ul>
+                                <li><button class="skill-button" data-skill="Team collaboration" type="button">Team collaboration</button></li>
+                                <li><button class="skill-button" data-skill="Problem-solving" type="button">Problem-solving</button></li>
+                                <li><button class="skill-button" data-skill="Communication" type="button">Communication</button></li>
+                                <li><button class="skill-button" data-skill="Continuous learning" type="button">Continuous learning</button></li>
+                                <li><button class="skill-button" data-skill="Adaptability" type="button">Adaptability</button></li>
+                            </ul>
+                        </div>
+                        <div aria-labelledby="tab-tools" class="skills-panel" hidden="" id="panel-tools" role="tabpanel">
+                            <ul>
+                                <li><button class="skill-button" data-skill="Docker" type="button">Docker</button></li>
+                                <li><button class="skill-button" data-skill="Linux / Shell / CLI" type="button">Linux / Shell / CLI</button></li>
+                                <li><button class="skill-button" data-skill="Git / GitHub" type="button">Git / GitHub</button></li>
+                                <li><button class="skill-button" data-skill="JWT authentication" type="button">JWT authentication</button></li>
+                                <li><button class="skill-button" data-skill="REST APIs" type="button">REST APIs</button></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="start-footer">
+                    <span>
+                        <img src="assets/icons/windows.png" alt="" class="icon icon-start" loading="lazy">
+                        start
+                    </span>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <section aria-labelledby="projects-heading" class="projects-section" id="projects">
+        <div class="wrap">
+            <h2 class="section-heading" id="projects-heading">📁 Projects</h2>
+            <div class="project-grid">
+                <article class="window project-card">
+                    <div class="titlebar">
+                        <span>
+                            <img src="assets/icons/eonet.png" alt="" class="icon icon-title" loading="lazy">
+                            NASA EONET Tracker.exe
+                        </span>
+                        <div aria-hidden="true" class="window-controls">
+                            <i>_</i>
+                            <i>□</i>
+                            <i>×</i>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-main">
+                            <div class="project-icon">
+                                <img src="assets/icons/eonet.png" alt="" class="icon icon-project" loading="lazy">
+                            </div>
+                            <div>
+                                <h3>NASA EONET Events Tracker</h3>
+                                <p>
+                                    Full-stack tracker for natural disasters using NASA's EONET API to fetch data.
+                                    It features multilayered, interactive and real-time world maps to show the events
+                                    to users in real time, location-based filtering of the events, custom geographical
+                                    zones for events monitoring, notifications panel, and scheduled data synchronisation.
+                                    <br>Don't worry if the live website shows the loader for a long time - the backend
+                                    service needs to be reawakened.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="tags">
+                            <span>React</span>
+                            <span>Express.js</span>
+                            <span>PostgreSQL</span>
+                            <span>Docker</span>
+                            <span>Leaflet</span>
+                        </div>
+                        <div class="project-actions">
+                            <a class="xp-button" href="https://github.com/APAXIC/nasa-disaster-tracker" rel="noopener noreferrer" target="_blank">
+                                <img src="assets/icons/github.png" alt="" class="icon icon-button" loading="lazy">
+                                GitHub ↗
+                            </a>
+                            <a class="xp-button live-link" href="https://nasa-disaster-tracker-1.onrender.com/" rel="noopener noreferrer" target="_blank">
+                                ↗ See Live
+                            </a>
+                            <button class="xp-button primary" data-gallery="eonet" type="button">
+                                View Gallery
+                            </button>
+                        </div>
+                    </div>
+                </article>
+                <article class="window project-card">
+                    <div class="titlebar">
+                        <span>
+                            <img src="assets/icons/argentum.svg" alt="" class="icon icon-title" loading="lazy">
+                            Argentum.exe
+                        </span>
+                        <div aria-hidden="true" class="window-controls">
+                            <i>_</i>
+                            <i>□</i>
+                            <i>×</i>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-main">
+                            <div class="project-icon">
+                                <img src="assets/icons/argentum.svg" alt="" class="icon icon-project" loading="lazy">
+                            </div>
+                            <div>
+                                <h3>Argentum</h3>
+                                <p>
+                                    Collaborative project of a budgeting tool. It features two-language localisation
+                                    and allows user to manipulate multiple interconnected data entities including
+                                    accounts, transactions, budgets, financial goals and more. User can also get
+                                    detailed statistical and historical financial analysis on the dashboard. I was
+                                    responsible for the database and the backend parts of the project.<br>On the live
+                                    website, the authentication process can take a long time if the backend service
+                                    wasn't active for some time.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="tags">
+                            <span>React</span>
+                            <span>TypeScript</span>
+                            <span>NestJS</span>
+                            <span>MongoDB</span>
+                            <span>Team project</span>
+                        </div>
+                        <div class="project-actions">
+                            <a class="xp-button" href="https://github.com/APAXIC/Argentum" rel="noopener noreferrer" target="_blank">
+                                <img src="assets/icons/github.png" alt="" class="icon icon-button" loading="lazy">
+                                GitHub ↗
+                            </a>
+                            <a class="xp-button live-link" href="https://argentum-g2fz.onrender.com/" rel="noopener noreferrer" target="_blank">
+                                ↗ See Live
+                            </a>
+                            <button class="xp-button primary" data-gallery="argentum" type="button">
+                                View Gallery
+                            </button>
+                        </div>
+                    </div>
+                </article>
+                <article class="window project-card">
+                    <div class="titlebar">
+                        <span>
+                            <img src="assets/icons/apartica.svg" alt="" class="icon icon-title" loading="lazy">
+                            Apartica.exe
+                        </span>
+                        <div aria-hidden="true" class="window-controls">
+                            <i>_</i>
+                            <i>□</i>
+                            <i>×</i>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-main">
+                            <div class="project-icon">
+                                <img src="assets/icons/apartica.svg" alt="" class="icon icon-project" loading="lazy">
+                            </div>
+                            <div>
+                                <h3>Apartica</h3>
+                                <p>
+                                    The project of accommodation booking platform. It has functionality for both
+                                    renters and hosts, allowing them to create, manage and rent properties, and manage
+                                    reservations. It uses multiple APIs: Stripe for payment handling, Google OAuth 2.0
+                                    for authentication, and Google Maps for showing properties' locations and searching
+                                    locations by address.<br>Unfortunately, unavailable live at the moment.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="tags">
+                            <span>React</span>
+                            <span>Express.js</span>
+                            <span>MongoDB</span>
+                            <span>Stripe API</span>
+                            <span>Google APIs</span>
+                        </div>
+                        <div class="project-actions">
+                            <a class="xp-button" href="https://github.com/APAXIC/Apartica" rel="noopener noreferrer" target="_blank">
+                                <img src="assets/icons/github.png" alt="" class="icon icon-button" loading="lazy">
+                                GitHub ↗
+                            </a>
+                            <button class="xp-button primary" data-gallery="apartica" type="button">
+                                View Gallery
+                            </button>
+                        </div>
+                    </div>
+                </article>
+                <article class="window project-card">
+                    <div class="titlebar">
+                        <span>
+                            <img src="assets/icons/enrollment.png" alt="" class="icon icon-title" loading="lazy">
+                            Applicants Enrollment.exe
+                        </span>
+                        <div aria-hidden="true" class="window-controls">
+                            <i>_</i>
+                            <i>□</i>
+                            <i>×</i>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-main">
+                            <div class="project-icon">
+                                <img src="assets/icons/enrollment.png" alt="" class="icon icon-project" loading="lazy">
+                            </div>
+                            <div>
+                                <h3>Applicants Enrollment</h3>
+                                <p>
+                                    My first fully functional program, created with WinForms to practice object-oriented
+                                    programming and the C# language, which I was learning at the time. The program
+                                    allows applicants to apply for various university courses, while enabling university
+                                    staff to approve or reject applications - either automatically or manually.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="tags">
+                            <span>C#</span>
+                            <span>.NET</span>
+                            <span>WinForms</span>
+                            <span>JSON</span>
+                            <span>OOP</span>
+                        </div>
+                        <div class="project-actions">
+                            <a class="xp-button" href="https://github.com/APAXIC/ApplicantsEnrollment" rel="noopener noreferrer" target="_blank">
+                                <img src="assets/icons/github.png" alt="" class="icon icon-button" loading="lazy">
+                                GitHub ↗
+                            </a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+            <p class="project-note">
+                For more projects and more information on the mentioned ones see
+                <a href="https://github.com/APAXIC" rel="noopener noreferrer" target="_blank">
+                    <img src="assets/icons/github.png" alt="" class="icon icon-button" loading="lazy">
+                    my GitHub profile ↗
+                </a>
+            </p>
+        </div>
+    </section>
+
+    <section aria-labelledby="education-heading" class="education-section" id="education">
+        <div class="wrap education-inner">
+            <div class="education-icon">🎓</div>
+            <div>
+                <h2 id="education-heading">Education</h2>
+                <h3>Computer Science — Dublin City University | Sep 2025 - May 2028 (2029)</h3>
+                <p>
+                    I am currently a second-year student in a bachelor’s program, majoring in Computer Science. I have
+                    frequently applied the knowledge gained during my studies to my own projects and vice versa.
+                </p>
+                <p>
+                    Completed my first year with an average grade of 86%.
+                </p>
+            </div>
+            <a class="xp-button" href="https://www.dcu.ie/courses/undergraduate/school-computing/computer-science" rel="noopener noreferrer" target="_blank">
+                View Course Page ↗
+            </a>
+        </div>
+    </section>
+
+    <section class="contact-section" id="contact" aria-labelledby="contact-heading">
+        <div class="wrap contact-inner">
+            <h2 id="contact-heading">Contact Me</h2>
+            <a class="xp-button contact-link" href="https://github.com/APAXIC" rel="noopener noreferrer" target="_blank">
+                <img src="assets/icons/github.png" alt="" class="icon icon-button" loading="lazy">
+                GitHub ↗
+            </a>
+            <a class="xp-button contact-link" href="https://www.linkedin.com/in/andrii-vus/" rel="noopener noreferrer" target="_blank">
+                <img src="assets/icons/linkedin.png" alt="" class="icon icon-button" loading="lazy">
+                LinkedIn LinkedIn ↗
+            </a>
+            <a class="xp-button contact-link" href="mailto:irishardron@gmail.com">
+                ✉ Email ↗
+            </a>
+        </div>
+    </section>
+</main>
+
+
+<footer class="footer">
+    <div class="wrap">
+        <span>
+            <img src="assets/icons/windows.png" alt="" class="icon icon-brand" loading="lazy">
+            Andrii's Portfolio.exe
+        </span>
+        <span>Built with HTML · CSS · JavaScript</span>
+        <a href="#home">↑ Back to top</a>
+    </div>
+</footer>
+
+
+<dialog aria-labelledby="gallery-title" class="gallery-dialog" id="gallery-dialog">
+    <div class="titlebar">
+        <span id="gallery-title">🖼 Gallery</span>
+        <button aria-label="Close gallery" class="dialog-close" id="gallery-close" type="button">×</button>
+    </div>
+    <div class="gallery-body">
+        <div class="gallery-image-area">
+            <img alt="" hidden="" id="gallery-image">
+            <div class="gallery-placeholder" id="gallery-placeholder">
+                <strong>Screenshot coming soon</strong>
+            </div>
+        </div>
+        <p aria-live="polite" id="gallery-caption"></p>
+        <div class="gallery-controls">
+            <button class="xp-button" id="gallery-prev" type="button">← Previous</button>
+            <span id="gallery-count"></span>
+            <button class="xp-button" id="gallery-next" type="button">Next →</button>
+        </div>
+    </div>
+</dialog>
+
+<dialog aria-labelledby="skill-title" class="skill-dialog" id="skill-dialog">
+    <div class="titlebar">
+        <span id="skill-title">💡 Skill details</span>
+        <button aria-label="Close skill details" class="dialog-close" id="skill-close" type="button">×</button>
+    </div>
+    <div class="skill-dialog-body">
+        <span aria-hidden="true" class="message-icon">ℹ️</span>
+        <p id="skill-description"></p>
+    </div>
+    <div class="message-actions">
+        <button class="xp-button" id="skill-ok" type="button">OK</button>
+    </div>
+</dialog>
 </body>
 </html>
