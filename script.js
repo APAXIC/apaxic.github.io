@@ -40,6 +40,10 @@ const galleries = {
     { src: 'assets/gallery/apartica/apartica-4.png', caption: 'Accommodation booking' },
     { src: 'assets/gallery/apartica/apartica-5.png', caption: 'Booking management' },
     { src: 'assets/gallery/apartica/apartica-6.png', caption: 'Accommodation management for hosts' }
+  ]},
+  articles: { title: 'Article Hub', images: [
+    { src: 'assets/gallery/articles/articles-1.png', caption: 'Main page' },
+    { src: 'assets/gallery/articles/articles-2.png', caption: 'Admin panel' }
   ]}
 };
 
